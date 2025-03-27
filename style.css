@@ -30,7 +30,7 @@ p {
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 2fr;
   grid-template-rows: auto 4fr;
 }
 
@@ -65,6 +65,10 @@ p {
 .magnify {
   height: 1.2rem;
   width: auto;
+  cursor: pointer;
+}
+.magnify:hover {
+  transform: scale(1.1);
 }
 
 .search-tool input {
@@ -98,6 +102,11 @@ p {
   width: 4rem;
   border-radius: 50%;
   justify-self: center;
+  cursor: pointer;
+}
+
+#panther-picture:hover {
+  transform: scale(1.05);
 }
 
 .profile-info {
@@ -129,6 +138,10 @@ p {
 #ringing-bell {
   height: 1rem;
   width: 1rem;
+  cursor: pointer;
+}
+#ringing-bell:hover {
+  transform: scale(1.1);
 }
 
 .button-area {
@@ -173,12 +186,26 @@ p {
   background-color: #1e90ff;
   color: white;
 }
+
+.sidebar-title-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.sidebar-title-area svg {
+  height: 4rem;
+  width: 4rem;
+}
 .sidebar .title {
-  margin: 3rem;
-  margin-top: 1rem;
-  padding: 1rem 1rem 1rem 3rem;
+  margin-top: 0.6rem;
+  padding: 1.1rem;
   font-size: 2rem;
 }
+
 .sidebar ul {
   display: grid;
 
@@ -186,11 +213,32 @@ p {
   font-size: 1.5rem;
   margin-left: 3rem;
   margin-bottom: 15rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 li {
   list-style-type: none;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.sidebar-item:hover {
+  background: none;
+  font-weight: bolder;
+}
+.sidebar-item > span {
+  color: white;
+}
+
+.sidebar-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: white;
 }
 
 main {
@@ -216,6 +264,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1.5rem;
+  cursor: pointer;
 }
 .project.card {
   height: 30vh;
@@ -225,6 +274,9 @@ section {
   box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
   -webkit-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
+}
+.project.card:hover {
+  transform: scale(1.02);
 }
 
 .information {
@@ -248,6 +300,9 @@ section {
   -webkit-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
 }
+.announcement-cards:hover {
+  transform: scale(1.02);
+}
 
 .announcement-cards > div {
   border-bottom: 1px solid gray;
@@ -269,6 +324,9 @@ section {
   -moz-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.65);
 }
 
+.trending-cards:hover {
+  transform: scale(1.02);
+}
 .trending.card {
   border-radius: 5px;
   display: grid;
